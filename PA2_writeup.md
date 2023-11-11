@@ -65,6 +65,9 @@ We'll also implement 5 of the basic arithmetic opperand, which are: +, -, *, /, 
 It looks terrible at first glance, but let's break it down:   
 ```This is the workflow that I suggest you to follow, but you can also implement the structure in any order you want.```   
 - Complete Derived Classes for Values: You'll need concrete classes for IntegerValue and BooleanValue. These classes represent the basic values in your expressions and will be the leaves of your expression tree. They'll override the evaluate() method to return their internal value.
+Convert integer and boolean in by following rule:
+```if integer is 0, then its boolean value is false, else true.```
+```if boolean is true, return 1, else 0.```   
 
 - Implement Arithmetic and Binary Expressions: Create classes and their constructor for each of the operations like conjunction, disjunction, sum, etc. These classes will contain references to other Expression instances representing the operands.
 
